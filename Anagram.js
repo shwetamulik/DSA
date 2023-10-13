@@ -19,19 +19,3 @@ function anagram(str1, str2) {
       charCount1[char] ? (charCount1[char] += 1) : (charCount1[char] = 1);
       charCount2[char] ? (charCount2[char] += 1) : (charCount2[char] = 1);
     }
-  
-    // Compare the character counts in both objects to determine if they are anagrams.
-    for (const letter in charCount1) {
-      if (charCount1[letter] !== charCount2[letter]) {
-        // If any character count doesn't match, the strings are not anagrams.
-        return false;
-      }
-    }
-  
-    // If all character counts match, the strings are anagrams.
-    return true;
-  }
-  
-  // Example usage of the function to check if "apple" and "pplea" are anagrams.
-  anagram("apple", "pplea"); // This will return true since the input strings are anagrams.
-  
